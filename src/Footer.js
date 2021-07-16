@@ -7,6 +7,7 @@ export default function Footer() {
         href="https://github.com/SilviaDam91/weather-react"
         target="_blank"
         id="gitLink"
+        rel="noreferrer"
       >
         Open-source code{" "}
       </a>
