@@ -8,12 +8,15 @@ import Footer from "./Footer.js";
 import Season from "./images/season.svg";
 import "./Weather.css";
 
-export default function Weather(props) {
-  function handleResponse(response) {}
-
-  let apiKey = "968e9119f2237b959ae20b2dab5f8100";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
+export default function Weather() {
+  const apiKey = "968e9119f2237b959ae20b2dab5f8100";
+  let city = "Rome";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(handleResponse);
+
+  function handleResponse(response) {
+    console.log(response.data);
+  }
 
   return (
     <div className="weatherContainer">
