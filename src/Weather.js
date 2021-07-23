@@ -5,6 +5,7 @@ import HourlyForecast from "./HourlyForecast.js";
 import DailyForecast from "./DailyForecast.js";
 import Footer from "./Footer.js";
 import Season from "./images/season.svg";
+import FormattedDate from "./FormattedDate.js";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -14,18 +15,19 @@ export default function Weather(props) {
     console.log(response.data);
     setWeatherData({
       ready: true,
+      date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
     });
   }
+
   if (weatherData.ready) {
     return (
       <div className="weatherContainer">
         <ul className="todayWeather">
-          <li> Currently in {props.defaultCity}</li>
-
+          <FormattedDate date={weatherData.date} /> <li>{props.defaultCity}</li>
           <li className="current-temperature">
             <span>☀️</span>
             <br />
