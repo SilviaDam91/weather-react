@@ -1,7 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate.js";
 import "./Weather.css";
-
+import WeatherTemperature from "./WeatherTemperature.js";
 export default function CurrentWeatherInfo(props) {
   return (
     <ul className="todayWeather">
@@ -14,16 +14,7 @@ export default function CurrentWeatherInfo(props) {
       <li className="current-temperature">
         <img src={props.info.iconUrl} alt={props.info.description} />
         <br />
-        <span className="now-temperature">
-          {Math.round(props.info.temperature)}
-        </span>
-        <a href="celsiusLink" className="celsius-link">
-          °C
-        </a>
-        <span className="temperature-bar">|</span>
-        <a href="fahrenheitLink" className="fahrenheit-link">
-          °F
-        </a>
+        <WeatherTemperature celsius={props.info.temperature} />
       </li>
       <li>Currently we have {props.info.description}</li>
       <li>Wind: {props.info.humidity}km/h</li>
