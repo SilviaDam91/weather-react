@@ -20,6 +20,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       city: response.data.name,
+      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
 
@@ -41,7 +42,7 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="weatherContainer">
-        <CurrentWeatherInfo info={weatherData} defaultCity="Amsterdam" />
+        <CurrentWeatherInfo info={weatherData} />
         <div className="search_header">
           <form onSubmit={handleSubmit}>
             <input

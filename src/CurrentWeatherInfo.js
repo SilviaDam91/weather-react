@@ -12,7 +12,7 @@ export default function CurrentWeatherInfo(props) {
       </li>
 
       <li className="current-temperature">
-        <span>☀️</span>
+        <img src={props.info.iconUrl} alt={props.info.description} />
         <br />
         <span className="now-temperature">
           {Math.round(props.info.temperature)}
