@@ -60,10 +60,15 @@ export default function Weather(props) {
             Current weather
           </button>
         </div>
+
         <HourlyForecast />
+
         <img src={Season} alt="season" width="20%" className="clock" />
+
         <br />
+
         <DailyForecast />
+
         <Footer />
       </div>
     );
