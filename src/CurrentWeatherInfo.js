@@ -8,12 +8,11 @@ export default function CurrentWeatherInfo(props) {
   return (
     <ul className="todayWeather">
       <li>{props.info.city}</li>
-
       <li>
         <FormattedDate date={props.info.date} />
       </li>
+      <WeatherIcon code={props.data.icon} size={52} />
 
-      <WeatherIcon code={props.data.icon} />
       <li className="current-temperature">
         <br />
         <WeatherTemperature celsius={props.info.temperature} />
