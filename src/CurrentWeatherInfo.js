@@ -2,6 +2,8 @@ import React from "react";
 import FormattedDate from "./FormattedDate.js";
 import "./Weather.css";
 import WeatherTemperature from "./WeatherTemperature.js";
+import WeatherIcon from "./WeatherIcon.js";
+
 export default function CurrentWeatherInfo(props) {
   return (
     <ul className="todayWeather">
@@ -11,8 +13,8 @@ export default function CurrentWeatherInfo(props) {
         <FormattedDate date={props.info.date} />
       </li>
 
+      <WeatherIcon code={props.data.icon} />
       <li className="current-temperature">
-        <img src={props.info.iconUrl} alt={props.info.description} />
         <br />
         <WeatherTemperature celsius={props.info.temperature} />
       </li>
