@@ -5,13 +5,16 @@ import WeatherTemperature from "./WeatherTemperature.js";
 import WeatherIcon from "./WeatherIcon.js";
 
 export default function CurrentWeatherInfo(props) {
+  console.log("CurrentWeatherInfo.props", props);
+
   return (
     <ul className="todayWeather">
       <li>{props.info.city}</li>
       <li>
         <FormattedDate date={props.info.date} />
       </li>
-      <WeatherIcon code={props.data.icon} size={52} />
+      <br />
+      <WeatherIcon code={props.info.icon} size={52} />
 
       <li className="current-temperature">
         <br />
