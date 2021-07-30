@@ -12,7 +12,7 @@ export default function CurrentWeatherInfo(props) {
         <FormattedDate date={props.info.date} />
       </li>
       <br />
-      <WeatherIcon code={props.info.icon} size={52} />
+      <WeatherIcon code={props.info.icon} size={120} />
 
       <li className="current-temperature">
         <br />
