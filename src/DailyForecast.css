@@ -1,0 +1,10 @@
+.forecast {
+  margin: 20px 10px 20px 10px;
+}
+.max_temperature {
+  color: #cf3a3a;
+  font-weight: 900;
+}
+.min_temperature {
+  font-weight: 900;
+}

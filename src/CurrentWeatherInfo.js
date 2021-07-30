@@ -7,7 +7,7 @@ import WeatherIcon from "./WeatherIcon.js";
 export default function CurrentWeatherInfo(props) {
   return (
     <ul className="todayWeather">
-      <li>{props.info.city}</li>
+      <li className="city">{props.info.city}</li>
       <li>
         <FormattedDate date={props.info.date} />
       </li>

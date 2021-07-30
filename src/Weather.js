@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import HourlyForecast from "./HourlyForecast.js";
 import DailyForecast from "./DailyForecast.js";
-import Footer from "./Footer.js";
 import Season from "./images/season.svg";
 import axios from "axios";
 import CurrentWeatherInfo from "./CurrentWeatherInfo.js";
@@ -44,6 +42,7 @@ export default function Weather(props) {
     return (
       <div className="weatherContainer">
         <CurrentWeatherInfo info={weatherData} />
+
         <div className="search_header">
           <form onSubmit={handleSubmit}>
             <input
@@ -62,15 +61,23 @@ export default function Weather(props) {
           </button>
         </div>
 
-        <HourlyForecast />
-
         <img src={Season} alt="season" width="20%" className="clock" />
 
         <br />
 
         <DailyForecast coordinates={weatherData.coordinates} />
 
-        <Footer />
+        <div className="footer">
+          <a
+            href="https://github.com/SilviaDam91/weather-react"
+            target="_blank"
+            id="gitLink"
+            rel="noreferrer"
+          >
+            Open-source code{" "}
+          </a>
+          <span>by Silvia Pariota</span>
+        </div>
       </div>
     );
   } else {
