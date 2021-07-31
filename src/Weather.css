@@ -27,20 +27,6 @@
   vertical-align: top;
 }
 
-.search-currentPositionWeather {
-  border-radius: 10px;
-  border: 2px #113a5d;
-  box-shadow: 1px 1px 1px #a5a3a3;
-  padding: 3px;
-  margin: 4px auto;
-}
-
-.search-currentPositionWeather:hover {
-  background-color: #add1fc;
-  transition: all 200ms ease-in out;
-  opacity: 1;
-}
-
 .weatherContainer {
   max-width: 600px;
   margin: 30px auto;

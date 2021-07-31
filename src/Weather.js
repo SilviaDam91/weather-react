@@ -55,10 +55,6 @@ export default function Weather(props) {
 
             <input type="submit" value="Search " className="search_buttom" />
           </form>
-
-          <button className="search-currentPositionWeather">
-            Current weather
-          </button>
         </div>
 
         <img src={Season} alt="season" width="20%" className="clock" />
